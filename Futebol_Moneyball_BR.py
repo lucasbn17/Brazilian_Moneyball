@@ -54,7 +54,8 @@ def replace_player():
         resposta_grafico = col2.button("Gerar gráfico")
         if resposta_grafico == True:
             fig = comp_graph(id_player)
-            fig.show()
+            st.plotly_chart(fig)
+#         fig.show()
       
   
         col1.metric(label="Valor de Performance", value=f"€{round(new_player.Valor_performance.values[0], 2) * 1000000:,.2f}")
@@ -152,7 +153,8 @@ def performance_substitute():
     resposta_grafico = col2.button("Gerar gráfico")
     if resposta_grafico == True:
         fig = comp_graph(id_player)
-        fig.show()
+        st.plotly_chart(fig)
+#         fig.show()
         
     col1.metric(label="Valor de Performance", value=f"€{round(new_player.Valor_performance.values[0], 2) * 1000000:,.2f}")
     col2.metric(label="Valor de Mercado", value=f"€{new_player.Valor_mercado.values[0] * 1000000:,.2f}")
@@ -249,7 +251,8 @@ def interesting_options():
     resposta_grafico = col2.button("Gerar gráfico")
     if resposta_grafico == True:
         fig = comp_graph(id_player)
-        fig.show()
+        st.plotly_chart(fig)
+#         fig.show()
         
     col1.metric(label="Valor de Performance", value=f"€{round(new_player.Valor_performance.values[0], 2) * 1000000:,.2f}")
     col2.metric(label="Valor de Mercado", value=f"€{new_player.Valor_mercado.values[0] * 1000000:,.2f}")
@@ -347,7 +350,8 @@ def best_performance_and_cost_benefit():
     resposta_grafico = col2.button("Gerar gráfico")
     if resposta_grafico == True:
         fig = comp_graph(id_player)
-        fig.show()
+        st.plotly_chart(fig)
+#         fig.show()
 
     col1.metric(label="Valor de Performance", value=f"€{round(new_player.Valor_performance.values[0], 2) * 1000000:,.2f}")
     col2.metric(label="Valor de Mercado", value=f"€{new_player.Valor_mercado.values[0] * 1000000:,.2f}")
