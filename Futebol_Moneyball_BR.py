@@ -469,10 +469,12 @@ st.title("Granabola")
 
 
 #df usado nas ferramentas de distância entre pontos
-df_knn = pd.read_csv(r'C:\Users\User\TERA - Python Exercises\Project TERA\df_knn.csv')
+# df_knn = pd.read_csv(r'C:\Users\User\TERA - Python Exercises\Project TERA\df_knn.csv')
+df_knn = pd.read_csv(r'df_knn.csv')
 
 #df usado na tabela comparativa de estatísticas da interface
-df_2022 = pd.read_csv(r'C:\Users\User\TERA - Python Exercises\Project TERA\df_2022.csv')
+# df_2022 = pd.read_csv(r'C:\Users\User\TERA - Python Exercises\Project TERA\df_2022.csv')
+df_2022 = pd.read_csv(r'df_2022.csv')
 df_2022.set_index('player_name', inplace=True)
 df_2022.drop(['Unnamed: 0', 'player_firstname', 'player_lastname', 'player_injured',
               'statistics_league_season', 'statistics_games_position', 'statistics_games_rating',
