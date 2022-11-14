@@ -2,7 +2,6 @@ import streamlit as st
 import base64
 import pandas as pd
 import numpy as np
-from scipy.spatial import distance
 import plotly.express as px
 import plotly.graph_objects as go
 import operator
