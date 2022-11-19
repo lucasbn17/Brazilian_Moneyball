@@ -269,7 +269,7 @@ def interesting_options():
           dist = Similarity_performance(baseJogador['player_id'].values[0], player['player_id'])
           distances.append((player['player_id'], dist, player['player_name'], player['club_names_tm'],
                             player['Valor_performance'], player['Valor_mercado'],
-                            dist / (player['Valor_performance'] / player['Valor_mercado'])))
+                            dist / (player['Valor_performance']**2 / player['Valor_mercado'])))
       
       distances.sort(key=operator.itemgetter(6))
       for x in range(5):
