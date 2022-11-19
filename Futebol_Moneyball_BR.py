@@ -50,15 +50,15 @@ def replace_player():
         resposta_grafico = False
         col1, col2 = st.columns(2)
         col1.metric(label="Jogador Escolhido", value= new_player.player_name.values[0])
-        col2.write("Clique no botão abaixo para gerar gráfico de jogadores")
-        resposta_grafico = col2.button("Gerar gráfico")
+        col1.write("Clique no botão abaixo para gerar gráfico de jogadores")
+        resposta_grafico = col1.button("Gerar gráfico")
         if resposta_grafico == True:
             fig = comp_graph(id_player)
             st.plotly_chart(fig)
 #         fig.show()
       
   
-        col1.metric(label="Valor de Performance", value=f"€{round(new_player.Valor_performance.values[0], 2) * 1000000:,.2f}")
+        col2.metric(label="Valor de Performance", value=f"€{round(new_player.Valor_performance.values[0], 2) * 1000000:,.2f}")
         col2.metric(label="Valor de Mercado", value=f"€{new_player.Valor_mercado.values[0] * 1000000:,.2f}")
         
         player_id_list = []
@@ -149,14 +149,14 @@ def performance_substitute():
     id_player = new_player['player_id'].iloc[0]
     col1, col2 = st.columns(2)
     col1.metric(label="Jogador Escolhido", value= new_player.player_name.values[0])
-    col2.write("Clique no botão abaixo para gerar gráfico de jogadores")
-    resposta_grafico = col2.button("Gerar gráfico")
+    col1.write("Clique no botão abaixo para gerar gráfico de jogadores")
+    resposta_grafico = col1.button("Gerar gráfico")
     if resposta_grafico == True:
         fig = comp_graph(id_player)
         st.plotly_chart(fig)
 #         fig.show()
         
-    col1.metric(label="Valor de Performance", value=f"€{round(new_player.Valor_performance.values[0], 2) * 1000000:,.2f}")
+    col2.metric(label="Valor de Performance", value=f"€{round(new_player.Valor_performance.values[0], 2) * 1000000:,.2f}")
     col2.metric(label="Valor de Mercado", value=f"€{new_player.Valor_mercado.values[0] * 1000000:,.2f}")
 
     player_id_list = []
@@ -247,14 +247,14 @@ def interesting_options():
     id_player = new_player['player_id'].iloc[0]
     col1, col2 = st.columns(2)
     col1.metric(label="Jogador Escolhido", value= new_player.player_name.values[0])
-    col2.write("Clique no botão abaixo para gerar gráfico de jogadores")
-    resposta_grafico = col2.button("Gerar gráfico")
+    col1.write("Clique no botão abaixo para gerar gráfico de jogadores")
+    resposta_grafico = col1.button("Gerar gráfico")
     if resposta_grafico == True:
         fig = comp_graph(id_player)
         st.plotly_chart(fig)
 #         fig.show()
         
-    col1.metric(label="Valor de Performance", value=f"€{round(new_player.Valor_performance.values[0], 2) * 1000000:,.2f}")
+    col2.metric(label="Valor de Performance", value=f"€{round(new_player.Valor_performance.values[0], 2) * 1000000:,.2f}")
     col2.metric(label="Valor de Mercado", value=f"€{new_player.Valor_mercado.values[0] * 1000000:,.2f}")
 
     player_id_list = []
@@ -346,14 +346,14 @@ def best_performance_and_cost_benefit():
     id_player = new_player['player_id'].iloc[0]
     col1, col2 = st.columns(2)
     col1.metric(label="Jogador Escolhido", value= new_player.player_name.values[0])
-    col2.write("Clique no botão abaixo para gerar gráfico de jogadores")
-    resposta_grafico = col2.button("Gerar gráfico")
+    col1.write("Clique no botão abaixo para gerar gráfico de jogadores")
+    resposta_grafico = col1.button("Gerar gráfico")
     if resposta_grafico == True:
         fig = comp_graph(id_player)
         st.plotly_chart(fig)
 #         fig.show()
 
-    col1.metric(label="Valor de Performance", value=f"€{round(new_player.Valor_performance.values[0], 2) * 1000000:,.2f}")
+    col2.metric(label="Valor de Performance", value=f"€{round(new_player.Valor_performance.values[0], 2) * 1000000:,.2f}")
     col2.metric(label="Valor de Mercado", value=f"€{new_player.Valor_mercado.values[0] * 1000000:,.2f}")
 
     player_id_list = []
