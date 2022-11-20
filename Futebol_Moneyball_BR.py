@@ -132,7 +132,7 @@ def replace_player():
                 comp_table = df_2022[(df_2022['player_id']==id) | (df_2022['player_id']==new_player.player_id.values[0])]
                 botão_comparação = st.button('Gerar tabela comparativa')
                 if botão_comparação == True:
-                    st.dataframe(comp_table)
+                    st.dataframe(comp_table.T)
 
       else:
         st.write("Erro! Verifique o nome do jogador e do time")
@@ -230,7 +230,7 @@ def performance_substitute():
             comp_table = df_2022[(df_2022['player_id']==id) | (df_2022['player_id']==new_player.player_id.values[0])]
             botão_comparação = st.button('Gerar tabela comparativa')
             if botão_comparação == True:
-                st.dataframe(comp_table)
+                st.dataframe(comp_table.T)
   
   else:
     st.write("Erro! Verifique o nome do jogador e do time")
@@ -328,7 +328,7 @@ def interesting_options():
             comp_table = df_2022[(df_2022['player_id']==id) | (df_2022['player_id']==new_player.player_id.values[0])]
             botão_comparação = st.button('Gerar tabela comparativa')
             if botão_comparação == True:
-                st.dataframe(comp_table)
+                st.dataframe(comp_table.T)
   
   else:
     st.write("Erro! Verifique o nome do jogador e do time")
@@ -427,7 +427,7 @@ def best_performance_and_cost_benefit():
             comp_table = df_2022[(df_2022['player_id']==id) | (df_2022['player_id']==new_player.player_id.values[0])]
             botão_comparação = st.button('Gerar tabela comparativa')
             if botão_comparação == True:
-                st.dataframe(comp_table)
+                st.dataframe(comp_table.T)
   
   else:
     st.write("Erro! Verifique o nome do jogador e do time")
@@ -485,6 +485,27 @@ df_2022.drop(['Unnamed: 0', 'player_firstname', 'player_lastname', 'player_injur
               'statistics_games_captain', 'statistics_substitutes_in', 'statistics_substitutes_out',
               'statistics_substitutes_bench', 'full_player_name', 'club_names_tm', 'tm_player_value'],
              axis=1, inplace=True)
+
+#########################################################################################################
+
+#Renomeando colunas da tabela comparativa
+df_2022.rename(columns={"player_birth_date": "Data de nascimento", "player_height": "Altura", "player_weight": "Peso",
+                        "statistics_games_appearances": "Nº de jogos", "statistics_games_lineups": "Jogos como titular",
+                        "statistics_games_minutes": "Minutos jogados", "statistics_shots_total": "Finalizações",
+                        "statistics_shots_on": "Finalizações no gol", "statistics_goals_total": "Gols",
+                        "statistics_goals_conceded": "Gols sofridos", "statistics_goals_assists": "Assistências",
+                        "statistics_goals_saves": "Defesas", "statistics_passes_total": "Total de passes",
+                        "statistics_passes_key": "Passes-chave", "statistics_passes_accuracy": "Acurácia dos passes",
+                        "statistics_tackles_total": "Embates defensivos", "statistics_tackles_blocks": "Bloqueios",
+                        "statistics_tackles_interceptions": "Interceptações", "statistics_duels_total": "Total de duelos",
+                        "statistics_duels_won": "Duelos ganhos", "statistics_dribbles_attempts": "Tentativas de dribles",
+                        "statistics_dribbles_success": "Dribles concluídos", "statistics_fouls_drawn": "Faltas recebidas",
+                        "statistics_fouls_committed": "Faltas cometidas", "statistics_cards_yellow": "Cartões amarelos",
+                        "statistics_cards_yellowred": "Segundo amarelo", "statistics_cards_red": "Cartões vermelhos",
+                        "statistics_penalty_won": "Pênaltis recebidos", "statistics_penalty_committed": "Pênaltis cometidos",
+                        "statistics_penalty_scored": "Pênaltis convertidos", "statistics_penalty_missed": "Pênaltis perdidos",
+                        "statistics_penalty_saved": "Pênaltis defendidos", "statistics_games_appearances": "Paticipação em jogos"},
+                        inplace=True)
 
 #########################################################################################################
 
