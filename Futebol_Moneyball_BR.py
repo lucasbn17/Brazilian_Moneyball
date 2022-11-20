@@ -6,6 +6,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import operator
 import math
+import webbrowser
 
 #########################################################################################################
 
@@ -464,6 +465,13 @@ def comp_graph(player_id) :
             )
         )))
    
+  #   fig.update_layout(legend=dict(
+#     yanchor="bottom",
+#     y=0.01,
+#     xanchor="right",
+#     x=0.99
+#     ))
+
   return fig
   
 #########################################################################################################
@@ -570,3 +578,9 @@ else:
     st.subheader("O Moneyball versão brasileira Herbert Richers")
     st.text("Este app identifica eventuais oportunidades de negócio no futebol brasileiro")
     st.markdown("![Alt Text](https://i.gifer.com/CbnC.gif)")
+    botão_saber_mais = False
+    new = 2
+    botão_saber_mais = st.button('Saber Mais')
+    if botão_saber_mais == True:
+        webbrowser.open('https://medium.com/@lucasbn17/granabola-o-moneyball-brasileiro-bfea29363fbe',new=new)
+        botão_saber_mais = False
