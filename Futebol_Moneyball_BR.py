@@ -533,6 +533,9 @@ df_2022.rename(columns={"player_birth_date": "Data de nascimento", "player_heigh
                         "statistics_penalty_saved": "Pênaltis defendidos", "statistics_games_appearances": "Paticipação em jogos"},
                         inplace=True)
 
+# drop jogadores duplicados
+df_2022.drop_duplicates(subset=['player_name'], keep=first)
+
 #########################################################################################################
 
 # Criando a seleção de posição do jogador avaliado
