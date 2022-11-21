@@ -1,12 +1,12 @@
 import streamlit as st
-import base64
+#import base64
 import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 import operator
 import math
-import webbrowser
+#import webbrowser
 
 #########################################################################################################
 
@@ -601,9 +601,9 @@ else:
     st.text("2. Selecione o tipo de recomendação desejada.")
     st.text("3. O aplicativo abrirá a página de recomendação.")
     st.text("4. Gere o gráfico de pontos e a tabela de performance comparativa entre\n jogadores para uma melhor análise.")
-    botão_saber_mais = False
-    new = 2
-    botão_saber_mais = st.button('Saber Mais')
-    if botão_saber_mais == True:
-        webbrowser.open('https://medium.com/@lucasbn17/granabola-o-moneyball-brasileiro-bfea29363fbe',new=new)
-        botão_saber_mais = False
+#     botão_saber_mais = False
+#     new = 2
+#     botão_saber_mais = st.button('Saber Mais')
+#     if botão_saber_mais == True:
+#         webbrowser.open('https://medium.com/@lucasbn17/granabola-o-moneyball-brasileiro-bfea29363fbe',new=new)
+#         botão_saber_mais = False
