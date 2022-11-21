@@ -597,7 +597,7 @@ if recomendação != None:
         st.markdown("![Alt Text](https://media.giphy.com/media/8rEVtjWcJoNI5miInv/giphy.gif)")
 else:
     st.subheader("O Moneyball versão brasileira Herbert Richers")
-    st.text("Imagina ficar sabendo minutos antes de contratar um jogador por milhões de euros \nque existe outro jogador no mercado com uma performance equivalente (ou até melhor) \ne muito mais barata.\nEste app identifica eventuais oportunidades de negócio no futebol brasileiro.")
+    st.text("Imagine ficar sabendo minutos antes de contratar um jogador por milhões de euros \nque existe outro jogador no mercado com uma performance equivalente (ou até melhor) \ne muito mais barata.\nEste app identifica eventuais oportunidades de negócio no futebol brasileiro.")
     st.markdown("![Alt Text](https://i.gifer.com/CbnC.gif)")
     st.text("Instruções:")
     st.text("1. Utilize o menu do lado esquerdo para selecionar um jogador como referência.")
