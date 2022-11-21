@@ -505,6 +505,8 @@ df_knn = pd.read_csv(r'df_knn.csv')
 
 #df usado na tabela comparativa de estatísticas da interface
 df_2022 = pd.read_csv(r'df_2022.csv')
+# drop jogadores duplicados
+df_2022.drop_duplicates(subset=['player_id'], keep='first')
 df_2022.set_index('player_name', inplace=True)
 df_2022.drop(['Unnamed: 0', 'player_firstname', 'player_lastname', 'player_injured',
               'statistics_league_season', 'statistics_games_position', 'statistics_games_rating',
@@ -533,8 +535,6 @@ df_2022.rename(columns={"player_birth_date": "Data de nascimento", "player_heigh
                         "statistics_penalty_saved": "Pênaltis defendidos", "statistics_games_appearances": "Paticipação em jogos"},
                         inplace=True)
 
-# drop jogadores duplicados
-df_2022.drop_duplicates(subset=['player_name'], keep='first')
 
 #########################################################################################################
 
